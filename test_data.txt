@@ -1,0 +1,3 @@
+primevideo 10003
+netflix 10008
+disneyplus 10013
