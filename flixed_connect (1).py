@@ -6,14 +6,13 @@ def getEndpoint(endpoint, parameters):
     baseUrl = "https://api.flixed.io/v1/"
     resource = baseUrl + endpoint
 
-    parameters['apiKey'] = "PASTE KEY HERE"
+    parameters['apiKey'] = "OhnrM0IKwIbaIwa1D7tBm96Y32vVd0v3"
 
     print("Getting Endpoint: " + resource + "?" + urllib.parse.urlencode(parameters))
-    response = requests.get(resource, headers=headers, params=parameters)
+    response = requests.get(resource, headers = headers, params = parameters)
     response_data = response.json()
     # pprint.pprint(response_data)
     return response_data
-
 
 # https://api.flixed.io/v1/episodes/62422?apiKey=<apiKey>
 
