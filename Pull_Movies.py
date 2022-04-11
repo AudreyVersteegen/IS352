@@ -21,12 +21,19 @@ print("Getting Endpoint: " + resource + "?" + urllib.parse.urlencode(parameters)
 # print(response_data)
 
 #making a count
-Movie_Data = file.open("Movie_Data.txt", "a")
-
+with open("Movie_Data") as filePointer:
+    Movie_Data = filePointer.read()
 with open("Netflix_Movies.txt") as filePointer:
     Movie_IDS = filePointer.read()
 
-Movie_IDS = Movie_IDS.split()
+Movie_IDS = Movie_IDS.strip().split("\n")
+movie_number = len(Movie_Data.strip().split("\n"))
+
+while(movie_number <= len(Movie_IDS)):
+
+    # do API CAll
+    # append to new file
+    movie_number += 1
 
 
 
