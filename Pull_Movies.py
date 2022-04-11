@@ -7,13 +7,9 @@ import requests
 apiKey = "OhnrM0IKwIbaIwa1D7tBm96Y32vVd0v3"
 
 baseUrl = "https://api.flixed.io"
-#resource = baseUrl + "/v1/streaming-providers/10008/titles?apiKey=" + apiKey
-
 parameters = {
 }
-
 parameters['apiKey'] = "OhnrM0IKwIbaIwa1D7tBm96Y32vVd0v3"
-print("Getting Endpoint: " + resource + "?" + urllib.parse.urlencode(parameters))
 
 # response = requests.get(resource, params = parameters)
 # response_data = response.json()
@@ -27,15 +23,25 @@ with open("Netflix_Movies.txt") as filePointer:
     Movie_IDS = filePointer.read()
 
 Movie_IDS = Movie_IDS.strip().split("\n")
-movie_number = len(Movie_Data.strip().split("\n"))
+movies = Movie_Data.strip().split("\n")
+if movies[0] == '':
+    movies = []
+movie_number = len(movies)
+while(movie_number < len(Movie_IDS)):
+    # DO API CALL
+    resource = baseUrl + f"/v1/movies/{Movie_IDS[movie_number]}?apiKey=" + apiKey
 
-while(movie_number <= len(Movie_IDS)):
+    response = requests.get(resource, params = parameters)
+    response_data = response.json()
 
-    # do API CAll
     # append to new file
+    if ('title' in response_data):
+        to_append = ''
+        to_append += response_data['title'] + '\t' +response_data["releaseDate"] + '\t' + response_data['runtimeMins'] + '\t' + response_data['language']
+        movies.append(to_append)
+    else:
+        break
+
     movie_number += 1
 
-
-
-#while there are more lines in Movie_IDS then in Data, look for more
-
+#then we need to write
