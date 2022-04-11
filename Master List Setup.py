@@ -22,6 +22,7 @@ file.write("MOVIES \n")
 for item in response_data['movies']:
     file.write(str(item))
     file.write('\n')
+
 file.write("\nSHOWS\n")
 for item in response_data['shows']:
     file.write(str(item))
