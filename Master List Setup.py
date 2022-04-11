@@ -17,7 +17,7 @@ response_data = response.json()
 print(resource)
 print(response_data)
 
-file = open("Netflix_Data.txt", "a")
+file = open("Netflix_Movies.txt", "a")
 file.write("MOVIES \n")
 for item in response_data['movies']:
     file.write(str(item))
