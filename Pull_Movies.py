@@ -17,7 +17,7 @@ parameters['apiKey'] = "OhnrM0IKwIbaIwa1D7tBm96Y32vVd0v3"
 # print(response_data)
 
 #making a count
-with open("Movie_Data") as filePointer:
+with open("Movie_Data.txt") as filePointer:
     Movie_Data = filePointer.read()
 with open("Netflix_Movies.txt") as filePointer:
     Movie_IDS = filePointer.read()
@@ -37,11 +37,17 @@ while(movie_number < len(Movie_IDS)):
     # append to new file
     if ('title' in response_data):
         to_append = ''
-        to_append += response_data['title'] + '\t' +response_data["releaseDate"] + '\t' + response_data['runtimeMins'] + '\t' + response_data['language']
+        to_append += response_data['title'] + '\t' +str(response_data["releaseDate"]) + '\t' + str(response_data['runtimeMins']) + '\t' + response_data['language']
+
         movies.append(to_append)
+        with open('Movie_Data.txt', 'a') as fileHandler:
+                fileHandler.write(str(to_append) + "\n")
     else:
         break
 
     movie_number += 1
 
 #then we need to write
+
+
+

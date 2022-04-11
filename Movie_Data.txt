@@ -1,0 +1,193 @@
+Geronimo: An American Legend	12/10/1993	115	en
+Johnny Mnemonic	05/26/1995	97	en
+The Guns of Navarone	04/27/1961	158	en
+Hollow Man	08/04/2000	112	en
+An Egyptian Story	09/27/1982	129	ar
+Alexandria, Again and Forever	01/02/1989	105	ar
+We Were Soldiers	03/01/2002	138	en
+The Sum of All Fears	05/31/2002	124	en
+Eight Legged Freaks	07/17/2002	99	en
+Terminator 2: Judgment Day	07/03/1991	137	en
+Dances with Wolves	03/30/1990	181	en
+Snakes on a Plane	08/06/2006	105	en
+The Bourne Ultimatum	08/03/2007	115	en
+Trailer Park Boys: The Movie	10/06/2006	95	en
+Shootout at Lokhandwala	05/25/2007	145	hi
+Body of Lies	10/10/2008	128	en
+Cadillac Records	12/05/2008	109	en
+Apocalypse Now	08/15/1979	147	en
+Adam: His Song Continues	09/29/1986	100	en
+Quiet Victory: The Charlie Wedemeyer Story	12/16/1988	100	en
+The Ryan White Story	01/16/1989	102	en
+A Stoning in Fulham County	10/24/1988	120	en
+Strange Voices	10/19/1987	100	en
+Too Young The Hero	03/27/1988	100	en
+Dead Man Down	03/08/2013	118	en
+Company of Heroes	02/25/2013	100	en
+The Berlin File	01/30/2013	120	ko
+The Railway Man	12/02/2013	116	en
+The November Man	08/27/2014	108	en
+The Siege of Jadotville	09/19/2016	108	en
+First They Killed My Father	02/18/2017	136	en
+Heneral Luna	09/09/2015	118	tl
+The Other Side of the Wind	11/02/2018	122	en
+Janoskians: Untold and Untrue	08/28/2015	88	en
+A Futile and Stupid Gesture	01/24/2018	101	en
+Joan Didion: The Center Will Not Hold	10/11/2017	92	en
+1898: Our Last Men in the Philippines	12/02/2016	130	es
+Miss Sloane	11/25/2016	132	en
+Bon Cop Bad Cop 2	05/12/2017	126	fr
+Something Huge	11/10/2017	86	es
+The Cloverfield Paradox	02/04/2018	102	en
+The Ottoman Lieutenant	03/10/2017	111	en
+S Storm	09/14/2016	90	cn
+The Zookeeper's Wife	03/31/2017	126	en
+Ek Jaan Hain Hum	09/16/1983	151	hi
+Hold the Dark	09/22/2018	126	en
+JFK: The Making of a President	06/16/2017	43	en
+Kingdom of Us	10/07/2017	109	en
+Force 2	11/18/2016	123	hi
+Dolemite Is My Name	10/04/2019	118	en
+Acts of Vengeance	10/27/2017	87	en
+Outlaw King	09/06/2018	122	en
+The Photographer of Mauthausen	10/26/2018	111	es
+Triple Frontier	03/06/2019	125	en
+Blood Red Sky	07/23/2021	121	de
+The Last Days of American Crime	06/05/2020	149	en
+22 July	10/04/2018	143	en
+The Perfection	09/20/2018	90	en
+Steel Rain	12/14/2017	139	ko
+I Am Mother	06/07/2019	114	en
+Between Two Ferns: The Movie	09/20/2019	82	en
+The Resistance Banker	03/08/2018	124	nl
+Black Mirror: Bandersnatch	12/28/2018	90	en
+Carmen Sandiego: To Steal or Not to Steal	03/10/2020	31	en
+Super Monsters Furever Friends	04/16/2019	58	en
+Wasp Network	09/09/2019	128	en
+Free Rein: The Twelve Neighs of Christmas	12/07/2018	58	en
+Nightbooks	09/15/2021	103	en
+A Family Reunion Christmas	12/09/2019	29	en
+A Trash Truck Christmas	12/11/2020	28	en
+Octonauts and the Great Barrier Reef	11/12/2020	47	en
+Sanju	06/29/2018	161	hi
+Go! Go! Cory Carson: The Chrissy	05/01/2020	42	en
+A Go! Go! Cory Carson Halloween	10/02/2020	21	en
+A Go! Go! Cory Carson Christmas	11/27/2020	21	en
+The Spooky Tale of Captain Underpants Hack-a-ween	10/08/2019	46	en
+Paskal	09/27/2018	100	ms
+True: Wuzzle Wegg Day	03/27/2020	23	en
+True: Rainbow Rescue	06/02/2020	0	en
+True: Friendship Day	09/01/2020	23	en
+StarBeam: Beaming in the New Year	12/14/2021	47	en
+Halloween Hero	08/04/2020	52	en
+The Witcher: Nightmare of the Wolf	08/23/2021	83	en
+Night Teeth	10/20/2021	107	en
+Da 5 Bloods	06/12/2020	156	en
+Dragons: Rescue Riders: Hunt for the Golden Dragon	03/27/2020	46	en
+Dragons: Rescue Riders: Huttsgalor Holiday	11/24/2020	46	en
+4th Republic	03/26/2019	120	en
+Backdraft 2	05/14/2019	102	en
+The Boss Baby: Get That Baby!	09/01/2020	24	en
+The Magic School Bus Rides Again in the Zone	12/26/2020	46	en
+Dragons: Rescue Riders: Secrets of the Songwing	07/24/2020	46	en
+Go! Go! Cory Carson: Chrissy Takes the Wheel	09/21/2021	61	en
+The Wandering Earth	02/05/2019	126	zh
+The Witch: Part 1. The Subversion	06/27/2018	125	ko
+Level Sixteen	02/20/2018	102	en
+El Camino: A Breaking Bad Movie	10/11/2019	123	en
+Chico Bon Bon and the Very Berry Holiday	12/03/2020	0	en
+Money Heist: The Phenomenon	04/03/2020	57	es
+Little Miss Sumo	10/18/2018	18	en
+Jonas Brothers Family Roast	11/23/2021	68	en
+Spirit Riding Free: Spirit of Christmas	12/06/2019	45	en
+Oprah Winfrey Presents: When They See Us Now	06/13/2019	61	en
+Super Monsters: Once Upon a Rhyme	06/01/2021	0	en
+Go! The Unforgettable Party	11/15/2019	60	es
+Jarhead: Law of Return	10/01/2019	103	en
+The Forgotten Battle	06/05/2021	124	nl
+Night on Earth: Shot in the Dark	01/29/2020	59	en
+Curtiz	08/23/2018	98	hu
+Dave Chappelle: The Kennedy Center Mark Twain Prize	01/07/2020	86	en
+Mighty Express: A Mighty Christmas	12/05/2020	25	en
+John Was Trying to Contact Aliens	01/23/2020	16	en
+Cousins	11/14/2009	120	ar
+Bartkowiak	07/28/2021	91	pl
+Occupation: Rainfall	10/15/2021	128	en
+Enola Holmes	09/23/2020	123	en
+Best Wishes, Warmest Regards: A Schitt's Creek Farewell	04/07/2020	44	en
+Gunjan Saxena: The Kargil Girl	08/12/2020	112	hi
+Tremors: Shrieker Island	10/20/2020	103	en
+The House of Flowers: The Movie	06/23/2021	86	es
+Headspace: Unwind Your Mind	06/15/2021	15	en
+Death to 2020	12/27/2020	71	en
+Fate: The Winx Saga - The Afterparty	02/20/2021	31	en
+The Yin-Yang Master: Dream of Eternity	12/24/2020	132	zh
+And Tomorrow the Entire World	10/29/2020	111	de
+SAS: Red Notice	08/11/2021	120	en
+'76	11/25/2016	118	en
+Waffles + Mochi's Holiday Feast	11/23/2021	28	en
+Besieged Bread	10/03/2016	12	ar
+Major Grom: Plague Doctor	04/01/2021	136	ru
+Trese After Dark	06/10/2021	36	en
+Nayattu	04/08/2021	124	ml
+Death to 2021	12/27/2021	60	en
+Sharkdog’s Fintastic Halloween	10/15/2021	24	en
+A StoryBots Space Adventure	11/09/2021	12	en
+Condom Lead	05/25/2013	15	ar
+A Man Returned	02/14/2016	0	ar
+Caddyshack	07/25/1980	98	en
+Last Action Hero	06/18/1993	130	en
+Life of Brian	08/17/1979	94	en
+Mars Attacks!	12/12/1996	106	en
+A River Runs Through It	10/09/1992	123	en
+Teenage Mutant Ninja Turtles	03/30/1990	93	en
+Donnie Brasco	02/27/1997	127	en
+Andaz Apna Apna	04/11/1994	160	hi
+Universal Soldier: The Return	08/05/1999	82	en
+Croupier	06/25/1998	94	en
+Osmosis Jones	08/10/2001	95	en
+Wyatt Earp	06/24/1994	191	en
+Willy Wonka & the Chocolate Factory	06/29/1971	100	en
+Not Another Teen Movie	12/07/2001	89	en
+Mobile Suit Gundam: Char's Counterattack	03/12/1988	124	ja
+Neon Genesis Evangelion: The End of Evangelion	07/19/1997	87	ja
+Raising Victor Vargas	05/16/2002	88	en
+Herod's Law	11/09/1999	120	es
+She's Gotta Have It	08/08/1986	84	en
+Inuyasha the Movie: Affections Touching Across Time	12/15/2001	99	ja
+Mobile Suit Gundam I	03/14/1981	139	ja
+Mobile Suit Gundam II: Soldiers of Sorrow	07/11/1981	133	ja
+Mobile Suit Gundam III: Encounters in Space	03/13/1982	144	ja
+Inuyasha the Movie 2: The Castle Beyond the Looking Glass	12/22/2002	100	ja
+Charlie and the Chocolate Factory	07/13/2005	115	en
+Inuyasha the Movie 3: Swords of an Honorable Ruler	12/20/2003	99	ja
+The Death of Mr. Lazarescu	05/17/2005	150	ro
+Friends with Money	04/07/2006	88	en
+Scary Movie 4	04/12/2006	83	en
+Apaharan	01/01/2005	173	hi
+Inuyasha the Movie 4: Fire on the Mystic Island	12/23/2004	88	ja
+Naruto the Movie: Ninja Clash in the Land of Snow	08/21/2004	82	ja
+Blade Runner	06/25/1982	118	en
+Naruto the Movie: Legend of the Stone of Gelel	08/06/2005	96	ja
+Monsters vs Aliens	03/19/2009	94	en
+Naruto the Movie: Guardians of the Crescent Moon Kingdom	08/05/2006	95	ja
+G.I. Joe: The Rise of Cobra	08/03/2009	118	en
+A Very Special Love	08/03/2008	105	tl
+Jonah Hex	06/18/2010	81	en
+Ip Man	12/12/2008	106	cn
+And Then Came Lola	01/01/2009	71	en
+The Other Guys	08/06/2010	107	en
+Trailer Park Boys: Countdown to Liquor Day	09/25/2009	101	en
+The Social Network	10/01/2010	121	en
+Green Lantern	06/16/2011	114	en
+LSD: Love, Sex aur Dhokha	03/19/2010	108	hi
+Delhi Belly	07/01/2011	102	hi
+Journey 2: The Mysterious Island	01/19/2012	94	en
+A Very Harold & Kumar Christmas	11/04/2011	108	en
+Arthur Christmas	11/10/2011	97	en
+21 Jump Street	03/14/2012	109	en
+Mosquita y Mari	08/03/2012	85	en
+The History of Future Folk	06/15/2012	86	en
+The Frozen Ground	07/11/2013	105	en
+Scary Movie 5	04/11/2013	86	en
+Shrek the Musical	09/17/2013	130	en
