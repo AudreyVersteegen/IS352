@@ -1,4 +1,4 @@
-# to pull from Neflix_Movies.txt and Netflix_Shows.py and generate the dictionaries
+# to pull from Neflix_shows.txt and Netflix_Shows.py and generate the dictionaries
 from typing import Any
 
 import pprint
