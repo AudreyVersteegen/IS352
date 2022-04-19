@@ -21,7 +21,7 @@ parameters['apiKey'] = "OhnrM0IKwIbaIwa1D7tBm96Y32vVd0v3"
 #making a count
 with open("Movie_Data.txt") as filePointer:
     Movie_Data = filePointer.read()
-with open("Netflix_Movies.txt") as filePointer:
+with open("Netflix_Movies.txt" ) as filePointer:
     Movie_IDS = filePointer.read()
 
 Movie_IDS = Movie_IDS.strip().split("\n")
