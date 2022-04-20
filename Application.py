@@ -23,14 +23,14 @@ def searchMenu():
     elif toSearch == '2':
         # COME BACK TO THIS
         # DO WE WANT TO HAVE A RUNTIME RANGE
-        print("Whould you like a movie that is: ")
+        print("Would you like a movie that is: ")
         print("1. Less then an hour\n2. In between 1 and 2 hours\n3. Longer then 2 hours")
         runtime = input("Enter: ")
         search(runtime, 'r')
     elif toSearch == '3':
-        # COME BACK TO THIS
-        # DO WE WANT DECADE RANGES
-        date = input("Enter date: ")
+        print("Select the range the release year falls within : ")
+        print("1. Before 1920\n2. After 1920 and before 1950 \n3. The 1950's\n4. The 1960's\n5. The 1970's\n6. The 1980's\n7. The 1990's\n8. The 2000's\n9. The 2010's\n10. The 2020's")
+        date = input("Enter: ")
         search(date, 'd')
     elif toSearch == 'l':
         lang = input("Enter language: ")
@@ -56,7 +56,28 @@ def search(input, flag): #flag can be t, r, d
             elif input == '3' and movieDict[item]['runtime'] > 120:
                 print(item)
     elif flag == 'd':
-        print("date")
+        for item in movieDict:
+            if input == "1" and movieDict[item]['releaseDate'] < 2015:
+                print(item)
+            elif input == "2" and (movieDict[item]['releaseDate'] >= 1920 and movieDict[item]['releaseDate'] < 1950):
+                print(item)
+            elif input == "3" and (movieDict[item]['releaseDate'] >= 1950 and movieDict[item]['releaseDate'] < 1960):
+                print(item)
+            elif input == "4" and (movieDict[item]['releaseDate'] >= 1960 and movieDict[item]['releaseDate'] < 1970):
+                print(item)
+            elif input == "5" and (movieDict[item]['releaseDate'] >= 1970 and movieDict[item]['releaseDate'] < 1980):
+                print(item)
+            elif input == "6" and (movieDict[item]['releaseDate'] >= 1980 and movieDict[item]['releaseDate'] < 1990):
+                print(item)
+            elif input == "7" and (movieDict[item]['releaseDate'] >= 1990 and movieDict[item]['releaseDate'] < 2000):
+                print(item)
+            elif input == "8" and (movieDict[item]['releaseDate'] >= 2000 and movieDict[item]['releaseDate'] < 2010):
+                print(item)
+            elif input == "9" and (movieDict[item]['releaseDate'] >= 2010 and movieDict[item]['releaseDate'] < 2020):
+                print(item)
+            elif input == "10" and movieDict[item]['releaseDate'] >= 2020:
+                print(item)
+
         #search by release Date
     if flag == 'l':
         print("language")
@@ -73,7 +94,11 @@ with open(fileName) as filePointer:
 
 for show in shows:
     elements = show.split('\t')
-    releaseDate = elements[1][-4:]
+    releaseDate = elements[1][-4:].strip()
+    if releaseDate != 'None':
+        releaseDate = int(releaseDate)
+    else:
+        releaseDate = 0
     toAdd = {'releaseDate' : releaseDate, 'misc' : elements[2]}
     if elements[0] not in showDict:
         showDict[elements[0]] = toAdd
@@ -88,8 +113,12 @@ with open(fileName) as filePointer:
 
 for movie in movies:
     elements = movie.split('\t')
-    releaseDate = elements[1][-4:]
+    releaseDate = elements[1][-4:].strip()
     runtime = elements[2].strip()
+    if releaseDate != 'None':
+        releaseDate = int(releaseDate)
+    else:
+        releaseDate = 0
     if runtime != 'None':
         runtime = int(runtime)
     else:
