@@ -10,7 +10,7 @@ for line in range(2, sheet.max_row):
     code = sheet.cell(row=line, column=1).value
     lang = sheet.cell(row=line, column=2).value
     langDict[code] = lang
-
+langDict['cn'] = 'Chinese'
 
 # read watchlist
 # search function
@@ -100,7 +100,7 @@ def search(input, flag): #flag can be t, r, d
     elif flag == 'l':
         # search by language
         for item in movieDict:
-            if input.lower() == langDict.lower():
+            if input.lower() == langDict[movieDict[item]['language']].lower():
                 print(item)
         for item in showDict:
             if input.lower() == langDict[showDict[item]['language']].lower():
@@ -122,7 +122,7 @@ for show in shows:
         releaseDate = int(releaseDate)
     else:
         releaseDate = 0
-    toAdd = {'releaseDate' : releaseDate, 'misc' : elements[2]}
+    toAdd = {'releaseDate' : releaseDate, 'misc' : elements[2], 'language' : elements[3]}
     if elements[0] not in showDict:
         showDict[elements[0]] = toAdd
 
