@@ -49,6 +49,9 @@ def searchMenu():
     elif toSearch == '4':
         lang = input("Enter language: ")
         search(lang, 'l')
+    else:
+        print("no lol.")
+        searchMenu()
 
 
 def search(input, flag): #flag can be t, r, d
@@ -97,7 +100,7 @@ def search(input, flag): #flag can be t, r, d
     elif flag == 'l':
         # search by language
         for item in movieDict:
-            if input.lower() == langDict[movieDict[item]['language']].lower():
+            if input.lower() == langDict.lower():
                 print(item)
         for item in showDict:
             if input.lower() == langDict[showDict[item]['language']].lower():
