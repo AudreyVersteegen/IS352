@@ -1,4 +1,6 @@
 import openpyxl
+import pprint
+
 wkbk = openpyxl.load_workbook("is352 language code.xlsx")
 sheet = wkbk.active
 langDict = {}
