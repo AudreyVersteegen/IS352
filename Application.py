@@ -1,17 +1,21 @@
 import pprint
 from datetime import datetime
+import openpyxl
+
 # read watchlist
 # search function
 Application = None
+
+
 def printMenu():
     print(f"Welcome to {Application}!")
     print("Would you like to: \n1. Search for a movie or show\n2. Go to your watchlist\n3. Exit")
     userInput = input("Please enter a number:  ").strip()
-
     if userInput != "1" and userInput != "2" and userInput != "3":
         print("That option was not provided, please choose again. ")
         userInput = printMenu()
     return userInput
+
 
 def searchMenu():
     print("What would you like to search for?")
@@ -35,6 +39,7 @@ def searchMenu():
     elif toSearch == 'l':
         lang = input("Enter language: ")
         search(lang, 'l')
+
 
 def search(input, flag): #flag can be t, r, d
     if flag == 't':
