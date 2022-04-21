@@ -46,7 +46,7 @@ def searchMenu():
         print("1. Before 1920\n2. After 1920 and before 1950 \n3. The 1950's\n4. The 1960's\n5. The 1970's\n6. The 1980's\n7. The 1990's\n8. The 2000's\n9. The 2010's\n10. The 2020's")
         date = input("Enter: ")
         search(date, 'd')
-    elif toSearch == 'l':
+    elif toSearch == '4':
         lang = input("Enter language: ")
         search(lang, 'l')
 
@@ -147,7 +147,6 @@ for movie in movies:
     if elements[0] not in movieDict:
         movieDict[elements[0]] = toAdd
 
-# search funtime
 # aka main
 EXIT = "3"
 userInput = printMenu()
