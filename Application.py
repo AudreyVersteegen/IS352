@@ -2,9 +2,7 @@ import pprint
 from datetime import datetime
 import openpyxl
 
-import openpyxl
-import pprint
-
+#setting up the language
 wkbk = openpyxl.load_workbook("is352 language code.xlsx")
 sheet = wkbk.active
 langDict = {}
@@ -12,7 +10,7 @@ for line in range(2, sheet.max_row):
     code = sheet.cell(row=line, column=1).value
     lang = sheet.cell(row=line, column=2).value
     langDict[code] = lang
-pprint.pprint(langDict)
+
 
 # read watchlist
 # search function
@@ -96,9 +94,14 @@ def search(input, flag): #flag can be t, r, d
                 print(item)
 
         #search by release Date
-    if flag == 'l':
-        print("language")
+    elif flag == 'l':
         # search by language
+        for item in movieDict:
+            if input.lower() == langDict[movieDict[item]['language']].lower():
+                print(item)
+        for item in showDict:
+            if input.lower() == langDict[showDict[item]['language']].lower():
+                print(item)
 
 
 # read in the data, into a dict.
