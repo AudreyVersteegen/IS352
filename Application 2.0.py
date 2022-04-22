@@ -27,86 +27,77 @@ def printMenu():
     return userInput
 
 
-def searchMenu():
+def searchMenu(mDict):
 
     print("What would you like to search for?")
     print("1. Title \n2. Runtime \n3. Release Date \n4. Language")
     toSearch = input("Enter option:")
     if toSearch == '1':
         title = input("Enter title: ")
-        toPrint = search(title, 't', movieDict, showDict)
+        results = search(title, 't', mDict)
     elif toSearch == '2':
         # COME BACK TO THIS
         # DO WE WANT TO HAVE A RUNTIME RANGE
         print("Would you like a movie that is: ")
         print("1. Less then an hour\n2. In between 1 and 2 hours\n3. Longer then 2 hours")
         runtime = input("Enter: ")
-        toPrint = search(runtime, 'r', movieDict, showDict)
+        results = search(runtime, 'r', mDict)
     elif toSearch == '3':
         print("Select the range the release year falls within : ")
         print("1. Before 1920\n2. After 1920 and before 1950 \n3. The 1950's\n4. The 1960's\n5. The 1970's\n6. The 1980's\n7. The 1990's\n8. The 2000's\n9. The 2010's\n10. The 2020's")
         date = input("Enter: ")
-        toPrint = search(date, 'd', movieDict, showDict)
+        results = search(date, 'd', mDict)
     elif toSearch == '4':
         lang = input("Enter language: ")
-        toPrint = search(lang, 'l', movieDict, showDict)
+        results = search(lang, 'l', mDict)
     else:
         print("That was not an option. Please enter a new command.")
-        searchMenu()
-    print(toPrint.keys())
+        searchMenu(mediaDict)
+    print(results.keys())
 
 
-def search(input, flag, mDict, sDict): #flag can be t, r, d
+def search(input, flag, mDict): #flag can be t, r, d
     results = {}
     if flag == 't':
         #search by title
         for title in mDict.keys():
             if input.upper() in title.upper():
                 results[title] = mDict[title]
-        for title in sDict.keys():
-            if input.upper() in title.upper():
-                results[title] = mDict[title]
     elif flag == 'r':
         # search by runtime
-        for item in movieDict:
-            if input == "1" and mDict[item]['runtime'] < 60:
-                results[item] = mDict[item]
-            elif input == "2" and (mDict[item]['runtime'] >= 60 and mDict[item]['runtime'] < 120):
-                results[item] = mDict[item]
-            elif input == '3' and mDict[item]['runtime'] > 120:
-                results[item] = mDict[item]
+        for item in mDict:
+            if 'runtime' in mDict[item]:
+                if input == "1" and mDict[item]['runtime'] < 60:
+                    results[item] = mDict[item]
+                elif input == "2" and (mDict[item]['runtime'] >= 60 and mDict[item]['runtime'] < 120):
+                    results[item] = mDict[item]
+                elif input == '3' and mDict[item]['runtime'] > 120:
+                    results[item] = mDict[item]
     elif flag == 'd':
-        for item in movieDict:
-            if input == "1" and mDict[item]['releaseDate'] < 2015:
+        # search by release date
+        start = 0
+        end = 0
+        if input == "1":
+            end = 1920
+        elif input == "2":
+            start = 1920
+            end = 1950
+        elif input in "3,4,5,6,7,8,9":
+            #not really sure that this'll run the way i want
+            start = 1920 + (int(input) * 10)
+            end = start + 10
+        else:
+            start = 2020
+            end = 10000
+        for item in mDict:
+            date = mDict[item]['releaseDate']
+            if date in range(start, end):
                 results[item] = mDict[item]
-            elif input == "2" and (mDict[item]['releaseDate'] >= 1920 and mDict[item]['releaseDate'] < 1950):
-                results[item] = mDict[item]
-            elif input == "3" and (mDict[item]['releaseDate'] >= 1950 and mDict[item]['releaseDate'] < 1960):
-                results[item] = mDict[item]
-            elif input == "4" and (mDict[item]['releaseDate'] >= 1960 and mDict[item]['releaseDate'] < 1970):
-                results[item] = mDict[item]
-            elif input == "5" and (mDict[item]['releaseDate'] >= 1970 and mDict[item]['releaseDate'] < 1980):
-                results[item] = mDict[item]
-            elif input == "6" and (mDict[item]['releaseDate'] >= 1980 and mDict[item]['releaseDate'] < 1990):
-                results[item] = mDict[item]
-            elif input == "7" and (mDict[item]['releaseDate'] >= 1990 and mDict[item]['releaseDate'] < 2000):
-                results[item] = mDict[item]
-            elif input == "8" and (mDict[item]['releaseDate'] >= 2000 and mDict[item]['releaseDate'] < 2010):
-                results[item] = mDict[item]
-            elif input == "9" and (mDict[item]['releaseDate'] >= 2010 and mDict[item]['releaseDate'] < 2020):
-                results[item] = mDict[item]
-            elif input == "10" and mDict[item]['releaseDate'] >= 2020:
-                results[item] = mDict[item]
-
-        #search by release Date
     elif flag == 'l':
         # search by language
         for item in mDict:
             if input.lower() == langDict[mDict[item]['language']].lower():
                 results[item] = mDict[item]
-        for item in sDict:
-            if input.lower() == langDict[sDict[item]['language']].lower():
-                results[item] = sDict[item]
     return results
 
 
@@ -122,10 +113,10 @@ def search(input, flag, mDict, sDict): #flag can be t, r, d
 # read in the data, into a dict.
 # shows
 fileName = "Show_Data.txt"
+mediaDict = {}
 with open(fileName) as filePointer:
     showFileContents = filePointer.read().strip()
     shows = showFileContents.split('\n')
-    showDict = {}
 
 for show in shows:
     elements = show.split('\t')
@@ -135,8 +126,8 @@ for show in shows:
     else:
         releaseDate = 0
     toAdd = {'releaseDate' : releaseDate, 'misc' : elements[2], 'language' : elements[3]}
-    if elements[0] not in showDict:
-        showDict[elements[0]] = toAdd
+    if elements[0] not in mediaDict:
+        mediaDict[elements[0]] = toAdd
 
 
 # movies
@@ -144,7 +135,6 @@ fileName = "Movie_Data.txt"
 with open(fileName) as filePointer:
     movieFileContents = filePointer.read().strip()
     movies = movieFileContents.split('\n')
-    movieDict = {}
 
 for movie in movies:
     elements = movie.split('\t')
@@ -159,8 +149,8 @@ for movie in movies:
     else:
         runtime = 0
     toAdd = {'releaseDate' : releaseDate, 'runtime' : runtime, 'language' : elements[3]}
-    if elements[0] not in movieDict:
-        movieDict[elements[0]] = toAdd
+    if elements[0] not in mediaDict:
+        mediaDict[elements[0]] = toAdd
 
 
 # watchlist
@@ -178,9 +168,8 @@ while True:
     if userInput == "1":
         # search for the movie with given parameters
         # ask for them
-        searchMenu()
+        searchMenu(mediaDict)
     if userInput == "2":
         # show them their watchlist
         print("got to watchlist")
     userInput = printMenu()
-
