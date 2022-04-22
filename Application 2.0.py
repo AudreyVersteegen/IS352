@@ -159,7 +159,7 @@ while True:
     if userInput == "1":
         # search for the movie with given parameters
         # ask for them
-        searchMenu(mediaDict)
+        searchMenu()
     if userInput == "2":
         # show them their watchlist
         print("got to watchlist")
