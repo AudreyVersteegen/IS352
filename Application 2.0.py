@@ -42,10 +42,13 @@ def searchMenu():
             mDict = search(lang, 'l', mDict)
         else:
             print("That was not an option. Please enter a new command.")
-        print(mDict.keys())
-        yn = input('Would you like to narrow down these results? [y/n] ').strip().lower()
-        if yn != 'y':
-            searching = False
+        if len(mDict) > 0:
+            print(mDict.keys())
+            yn = input('Would you like to narrow down these results? [y/n] ').strip().lower()
+            if yn != 'y':
+                searching = False
+        else:
+            print("There are no films or movies that meet those qualifications.")
 
 
 def search(input, flag, mDict):  # flag can be t, r, d
