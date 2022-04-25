@@ -1,7 +1,7 @@
 import pprint
 import openpyxl
 # read watchlist
-Application = None
+Application = "Pandora's Box"
 
 
 def printMenu():
