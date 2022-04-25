@@ -49,6 +49,13 @@ def searchMenu():
             yn = input('Would you like to narrow down these results? [y/n] ').strip().lower()
             if yn != 'y':
                 searching = False
+                wlQuestion = input("Would you like to add any of these to your watchlist? [y/n]")
+                if wlQuestion.strip() == "y":
+                    finalAsk = input("Enter the title of the item you would like to add: ")
+                    for item in mDict.keys():
+                        if finalAsk.lower() == item.lower():
+                            print("Item added to watchlist!")
+                            addWatchlist(watchlist, item)
         else:
             print("There are no films or movies that meet those qualifications.")
 
@@ -91,8 +98,10 @@ def search(input, flag, mDict):  # flag can be t, r, d
 
 def viewWatchlist(watchlist):
     print('Your watchlist: ')
-    for item in len(watchlist):
-        print(f'{item + 1}. {watchlist[item]}')
+    wlPos = 0
+    for item in watchlist:
+        wlPos += 1
+        print(f'{wlPos}. {item}')
     userInput = input("Would you like to: \n1. Delete an item\n2. Return to main menu \n Enter number:").strip()
     if userInput == '1':
         # which item do you want to ditch
@@ -106,12 +115,14 @@ def viewWatchlist(watchlist):
 
 
 def addWatchlist(watchlist, item):
-    watchlist.append(item)
+    if item not in watchlist:
+        watchlist.append(item)
 
-def writeWatchlist(watchlist, wl):
+def writeWatchlist(watchlist, fileName):
     # write at the end of running
-    for item in watchlist:
-        wl.write(item + '\n')
+    with open(fileName, 'w') as fileHandler:
+        for item in watchlist:
+            fileHandler.write(item + '\n')
 
 # setting up the language
 wkbk = openpyxl.load_workbook("is352 language code.xlsx")
@@ -166,9 +177,9 @@ for movie in movies:
 
 # watchlist
 fileName = "Watchlist.txt"
-with open(fileName, 'w') as filePointer:
-    wl = filePointer.read().strip()
-    watchlist = wl.split('\n')
+with open(fileName, 'r+') as filePointer:
+    wl = filePointer.read()
+    watchlist = wl.strip().split('\n')
 
 
 # aka main
@@ -185,3 +196,4 @@ while True:
         # show them their watchlist
         viewWatchlist(watchlist)
     userInput = printMenu()
+writeWatchlist(watchlist, fileName)
