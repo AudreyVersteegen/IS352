@@ -19,7 +19,7 @@ def searchMenu():
     searching = True
     while searching:
         print("What would you like to search for?")
-        print("1. Title \n2. Runtime \n3. Release Date \n4. Language")
+        print("1. Title \n2. Runtime \n3. Release Date \n4. Language\n5. Return to main menu")
         toSearch = input("Enter option:")
         if toSearch == '1':
             title = input("Enter title: ")
@@ -40,6 +40,8 @@ def searchMenu():
         elif toSearch == '4':
             lang = input("Enter language: ")
             mDict = search(lang, 'l', mDict)
+        elif toSearch == '5':
+            break
         else:
             print("That was not an option. Please enter a new command.")
         if len(mDict) > 0:
@@ -87,15 +89,29 @@ def search(input, flag, mDict):  # flag can be t, r, d
     return results
 
 
-# def viewWatchlist():
-#     for item in watchlist:
-#         print(item)
+def viewWatchlist(watchlist):
+    print('Your watchlist: ')
+    for item in len(watchlist):
+        print(f'{item + 1}. {watchlist[item]}')
+    userInput = input("Would you like to: \n1. Delete an item\n2. Return to main menu \n Enter number:").strip()
+    if userInput == '1':
+        # which item do you want to ditch
+        toDelete = int(input("Enter the number of the movie you would like to remove: "))
+        # delete it
+        watchlist.pop(toDelete - 1)
+        viewWatchlist(watchlist)
+    elif userInput != '2':
+        print("That option was not provided, please choose again. ")
+        viewWatchlist(watchlist)
 
-# def addWatchlist():
 
-# def writeWatchlist():
-#     # write at the end of running
+def addWatchlist(watchlist, item):
+    watchlist.append(item)
 
+def writeWatchlist(watchlist, wl):
+    # write at the end of running
+    for item in watchlist:
+        wl.write(item + '\n')
 
 # setting up the language
 wkbk = openpyxl.load_workbook("is352 language code.xlsx")
@@ -149,9 +165,11 @@ for movie in movies:
         mediaDict[elements[0]] = toAdd
 
 # watchlist
-# fileName = "Watchlist.txt"
-# with open(fileName, 'w') as filePointer:
-#     watchlist = filePointer.read().strip().split('\n')
+fileName = "Watchlist.txt"
+with open(fileName, 'w') as filePointer:
+    wl = filePointer.read().strip()
+    watchlist = wl.split('\n')
+
 
 # aka main
 EXIT = "3"
@@ -165,5 +183,5 @@ while True:
         searchMenu()
     if userInput == "2":
         # show them their watchlist
-        print("got to watchlist")
+        viewWatchlist(watchlist)
     userInput = printMenu()
