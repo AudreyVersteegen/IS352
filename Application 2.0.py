@@ -46,7 +46,7 @@ def searchMenu():
             print("That was not an option. Please enter a new command.")
         if len(mDict) > 0:
             for item in mDict:
-                print(item + "\tReleased: " + str(item['releaseDate']))
+                print(item + "\tReleased: " + str(mDict[item]['releaseDate']))
             yn = input('Would you like to narrow down these results? [y/n] ').strip().lower()
             if yn != 'y':
                 searching = False
