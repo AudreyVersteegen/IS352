@@ -126,7 +126,7 @@ def writeWatchlist(watchlist, fileName):
             fileHandler.write(item + '\n')
 
 # setting up the language
-wkbk = openpyxl.load_workbook("is352 language code.xlsx")
+wkbk = openpyxl.load_workbook("is352_language_code.xlsx")
 sheet = wkbk.active
 langDict = {}
 for line in range(2, sheet.max_row):
